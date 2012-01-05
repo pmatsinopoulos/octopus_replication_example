@@ -1,3 +1,5 @@
+require 'octopus'
+
 class Product < ActiveRecord::Base
   replicated_model
 

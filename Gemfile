@@ -7,7 +7,7 @@ gem 'rails', '3.0.9'
 
 gem 'mysql2', '0.2.6'
 
-gem 'ar-octopus', :git => 'https://github.com/tchandy/octopus.git', :require => 'octopus'
+gem 'ar-octopus', :git => 'https://github.com/tchandy/octopus.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
