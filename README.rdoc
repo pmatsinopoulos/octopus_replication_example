@@ -1,0 +1,42 @@
+= Octopus Replication Example
+
+I wanted to build an Octopus[https://github.com/tchandy/octopus] Replication Example that would work ok with <code>Rails 3.0</code>
+and wouldn't break on <code>rake</code> command. That is why I created this one.
+
+You will see that the initial commit of this project works ok, but <code>rake</code> fails on purpose. This is due to the fact that I want to show
+that <code>octopus</code> is required in <code>Gemfile</code>. This generates some conflicts due to the fact that Octopus uses the word <code>environments</code>.
+
+Next commit of this project (version: 1.0) has the require <code>octopus</code> removed from <code>Gemfile</code> and moved to the ruby files that really
+need it. This change makes the <code>rake</code> command work ok, and still the application works ok too.
+
+It took me 1 day and a half to resolve this, that is why I wanted to publish on net. Hoping that it will help others
+that face the same problem.
+
+Your are welcome to make comments on that.
+
+= Environment Requirements
+
+Here is the list of requirements if you want to make this application run on your machine
+
+* MySQL: 5.1
+* rvm: 1.2.7
+* ruby: 1.8.7
+* gem: 1.8.8
+* bundler: 1.0.21
+
+I recommend that you use rvm[http://beginrescueend.com] and create a <code>gemset</code>. Then create <code>.rvmrc</code> file on root folder of the project that
+will set your correct ruby and <code>gemset</code> use.
+
+The use
+
+   bundle install
+
+to download and lock all the gems necessary to make this work.
+
+Also, I use a second host that has the slave MySQL node and verify that replication works ok. If you do not know how you
+can do MySQL Master/Slave replication, ask me ([Panayotis Matsinopoulos][mailto:panayotis@matsinopoulos.gr]) and I will send you details instructions.
+
+
+
+
+

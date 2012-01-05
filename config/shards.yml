@@ -1,0 +1,16 @@
+octopus:
+  replicated: true
+  fully_replicated: false
+  verify_connection: true
+  environments:
+    - development
+  development:
+    shard_one:
+      adapter: mysql2
+      encoding: utf8
+      reconnect: false
+      database: octopus_replication_example_development
+      pool: 5
+      username: root
+      password:
+      host: 10.0.0.122
